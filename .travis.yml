@@ -1,0 +1,13 @@
+sudo: required
+
+lang: bash
+
+services:
+  - docker
+
+before_install:
+  - docker build -t lixinio/alpine:3.7 .
+
+script:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+  - docker push lixinio/alpine:3.7
