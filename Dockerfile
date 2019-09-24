@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:3.9
 
 COPY rootfs/etc/apk/repositories /etc/apk/repositories
 
